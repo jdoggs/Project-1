@@ -36,11 +36,14 @@ let heads = 0;
 let tails = 0;
 let url = "Interjections2.json";
 let word = document.getElementById("word");
+let sound = new Audio("Assets/AudioInterjections/02Coin.mp3");
 
 
 /* On click of button spin coin ainamtion */
 function coinToss() {
   console.log("coinTossing");
+  sound.play();
+
   /* Random number 0 or 1  */
   let x = Math.floor(Math.random() * 2);
   let randomword = Math.floor(Math.random() * 217);
@@ -57,7 +60,14 @@ function coinToss() {
  .then(response => response.json())
 .then(data =>{
   console.log(data.interjections[randomword]); 
-  word.innerHTML = data.interjections[randomword];
+  
+  let interjectionSound = new Audio("Assets/AudioInterjections/"+data.interjections[randomword]+".mp3");
+  // interjectionSound.play();
+  setTimeout(()=>{
+    interjectionSound.play();
+    word.innerHTML = data.interjections[randomword];
+},3000);
+
 });
 }
 button.onclick = function() {
