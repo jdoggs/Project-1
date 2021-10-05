@@ -38,7 +38,6 @@ let url = "Interjections2.json";
 let word = document.getElementById("word");
 let sound = new Audio("Assets/AudioInterjections/02Coin.mp3");
 
-
 /* On click of button spin coin ainamtion */
 function coinToss() {
   console.log("coinTossing");
@@ -66,7 +65,7 @@ function coinToss() {
   setTimeout(()=>{
     interjectionSound.play();
     word.innerHTML = data.interjections[randomword];
-},3000);
+},2500);
 
 });
 }
