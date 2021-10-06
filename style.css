@@ -4,7 +4,8 @@ body {
     display: flex;
     justify-content: left; 
     align-items: center; 
-    height:100vh;
+    height:80vh;
+    margin: 65px;
     /* background-image: 
     background-position: center;
     background-repeat: no-repeat;
@@ -24,6 +25,10 @@ body {
     text-align:center;
     /* font-family:Arial; */
     letter-spacing:5px;
+    border-style: dashed;
+    border-width: 10px;
+    margin-block: 30px;
+
     /* color:rgb(64, 1, 134); */
 }
 #directions {
@@ -31,19 +36,19 @@ body {
     font-size: 30px;
     padding-left: 60px;
 }
-.handimage {
+/* .handimage {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center
-}
+} */
 .coin_flip {
     display: flexbox;
-    flex-direction: column;
+    flex-direction: row;
 }
 .coin_button {
     display: flexbox;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .coin_image {
@@ -54,12 +59,12 @@ body {
 #button {
     background-color: #e74e1f;
     color: #fff;
-    padding: 15px  15px;
-    border-radius: 80px;
-    display:inline-block;
+    padding: 10px  10px;
+    border-radius: 40px;
+    display: flexbox;
     transition: 0.5s;
     cursor:pointer;
-    font-weight: 100;
+    font-weight: 150;
 }
 #button:hover {
     opacity: 0.5;
@@ -70,7 +75,7 @@ body {
     /* font-size: 40px; */
     color:#e74e1f;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 70px;
+    font-size: 60px;
 }
 /* #canvas-image {
     position: absolute;
